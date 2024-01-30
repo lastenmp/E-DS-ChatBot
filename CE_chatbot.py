@@ -4,7 +4,7 @@ import google.generativeai as genai
 
 
 st.set_page_config(page_title="E&DS-ChatBot", page_icon="askgpt.png")
-genai.configure(api_key= st..secrets["GOOGLE_API_KEY"])
+genai.configure(api_key= st.secrets["GOOGLE_API_KEY"])
 
 # Set up the model
 generation_config = {

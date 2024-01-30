@@ -1,19 +1,10 @@
 import streamlit as st
 from streamlit import chat_message as message1
 import google.generativeai as genai
-from IPython.display import display, Markdown
-import textwrap
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
-
-def to_markdown(text):
-    text = text.replace(".", "*")
-    return Markdown(textwrap.indent(text, '>', predicate=lambda _: True))
 
 st.set_page_config(page_title="E&DS-ChatBot", page_icon="askgpt.png")
-genai.configure(api_key= os.getenv('GOOGLE_API_KEY'))
+genai.configure(api_key= st..secrets["GOOGLE_API_KEY"])
 
 # Set up the model
 generation_config = {
